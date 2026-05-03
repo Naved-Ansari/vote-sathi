@@ -54,7 +54,7 @@ The repository includes a `Dockerfile` optimized for deploying Vite/React SPA ap
 
 2. **Run Locally via Docker** (Testing):
    ```bash
-   docker run -p 8080:80 vote-sathi
+   docker run -p 8080:8080 vote-sathi
    ```
 
 3. **Deploy to Cloud Run via gcloud CLI**:
@@ -64,7 +64,7 @@ The repository includes a `Dockerfile` optimized for deploying Vite/React SPA ap
      --platform managed \
      --region asia-south1 \
      --allow-unauthenticated \
-     --port 80
+     --port 8080
    ```
 
 *(Alternatively, you can connect your GitHub repository directly in the Google Cloud Console for continuous deployment to Cloud Run).*
