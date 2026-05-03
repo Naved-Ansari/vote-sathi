@@ -12,38 +12,6 @@ An intelligent, interactive election assistant web application designed to guide
 - **State Management**: React Context + useReducer
 - **APIs**: Google Maps (Polling Booths), Google Calendar (Reminders), Firebase (Ready for auth/db)
 
-### Architecture Diagram
-
-```mermaid
-graph TB
-    subgraph Frontend["Frontend (React + Vite)"]
-        App["App Shell"]
-        Router["React Router"]
-        Pages["Pages (Lazy Loaded)"]
-        Context["Providers (Theme, Lang, Assistant)"]
-    end
-
-    subgraph Core Features
-        Assistant["Smart Chat Assistant"]
-        Eligibility["Eligibility Checker"]
-        Registration["Registration Guide"]
-        Booth["Polling Booth Finder"]
-        Timeline["Election Timeline"]
-    end
-
-    subgraph External Services
-        Firebase["Firebase (Auth/Firestore)"]
-        GoogleMaps["Google Maps API"]
-        GoogleCalendar["Google Calendar API"]
-    end
-
-    App --> Router --> Pages
-    Pages --> Context
-    Context --> Core Features
-    Booth --> GoogleMaps
-    Timeline --> GoogleCalendar
-    Context -.-> Firebase
-```
 
 ## Local Setup
 
